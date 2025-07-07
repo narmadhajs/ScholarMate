@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fbeaff, #e0f7ff);
+    color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    animation: slideIn 0.6s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    background: linear-gradient(to right, #e224c9, #e496d9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:#eb0bcd;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 0 #ffffff;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #e224c9, #ff87d7);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(226, 36, 201, 0.3);
+    transition: transform 0.2s, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 24px rgba(226, 36, 201, 0.4);
+}
+
+.notes textarea {
+    width: 100%;
+    height: 180px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: inset 2px 2px 6px rgba(255, 255, 255, 0.5),
+                inset -2px -2px 6px rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+    resize: vertical;
+    transition: box-shadow 0.3s;
+}
+
+.notes textarea:focus {
+    outline: none;
+    box-shadow: inset 2px 2px 8px rgba(226, 36, 201, 0.15),
+                inset -2px -2px 8px rgba(255, 255, 255, 0.6);
+}
+
+#results {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.result-item {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 18px 24px;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.05);
+    animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.result-content {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #444;
+}

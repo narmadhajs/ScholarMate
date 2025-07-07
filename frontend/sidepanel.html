@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ScholarMate</title>
+    <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>ScholarMate - Your Research Assistant</h2>
+        </div>
+        <div>
+            <style>
+               h4{
+                    color: rgb(223, 60, 182);
+                    font-size: larger;
+                    }</style>
+            <h4>First select the contents and press Summarize and you can save your notes below..</h4>
+        </div>
+        <div class="actions">
+            <center><button id="summarizeBtn">Summarize</button></center>
+        </div>
+
+        <div class="notes">
+            <h3>Research Notes</h3>
+            <textarea id="notes" placeholder="Take notes here"></textarea>
+            <center><button id="saveNotesBtn">Save Notes</button></center>
+        </div>
+
+        <div id="results"></div>
+    </div>
+    <script src="sidepanel.js"></script>
+</body>
+</html>
